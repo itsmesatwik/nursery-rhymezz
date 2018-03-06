@@ -18,3 +18,11 @@ def fixLinks(links):
         if (!link.startswith('http')):
             fixedLinks.append("http://www.nurseryrhumes.org/" + link)
     return fixedLinks
+
+def scrapeRhymes(links):
+    rhymes = []
+    for link in links:
+        soup = BeautifulSoup(link, "html.parser")
+        rhymes.append(soup.find(id = "nursery-rhymes-lyrics").get_text())
+    return rhymes
+
