@@ -12,3 +12,9 @@ def getListOfUrl:
         list.append( link['href'])
     return list
 
+def fixLinks(links):
+    fixedLinks = []
+    for link in links:
+        if (!link.startswith('http')):
+            fixedLinks.append("http://www.nurseryrhumes.org/" + link)
+    return fixedLinks
