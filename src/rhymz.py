@@ -34,7 +34,7 @@ def scrapeRhymes(links):
     return rhymes
 
 # call function
-def printRhymes:
+def printRhymes():
     rhymes = scrapeRhymes(fixLinks(getListOfUrl(url)))
     for text in rhymes:
         print(text)
