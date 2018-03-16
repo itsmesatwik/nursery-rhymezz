@@ -12,7 +12,7 @@ def getScores():
 def calculateOverallSentiment(dict):
     sentimentWeight = 0
     for rhyme in dict:
-        sentimentWeight += (dict[rhyme]["pos"] + dict[rhyme["neg"] + dict[rhyme]["neu"])
+        sentimentWeight += (dict[rhyme]["pos"] + dict[rhyme]["neg"] + dict[rhyme]["neu"])
     return sentimentWeight
 
 def sentimentMeaning(weight):
