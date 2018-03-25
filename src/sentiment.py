@@ -1,6 +1,6 @@
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from rhymz.py import * 
-analyzer = SentimentIntesityAnalyser()
+import rhymz
+analyzer = SentimentIntensityAnalyzer()
 def getScores():
     url  = "http://nurseryrhymes.org/nursery-rhymes.html"
     rhymes = scrapeRhymes(fixLinks(getListOfUrl(url)))
@@ -23,4 +23,4 @@ def sentimentMeaning(weight):
     else:
         print("Rhyme is neurtal with a weight of " + weight)
 
-    
+
