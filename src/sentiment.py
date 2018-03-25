@@ -3,7 +3,7 @@ import rhymz
 analyzer = SentimentIntensityAnalyzer()
 def getScores():
     url  = "http://nurseryrhymes.org/nursery-rhymes.html"
-    rhymes = scrapeRhymes(fixLinks(getListOfUrl(url)))
+    rhymes = rhymz.scrapeRhymes(fixLinks(getListOfUrl(url)))
     sentimentScores = {}
     for rhyme in rhymes:
         sentimentScores[rhyme] = analyzer.polarity_scores(rhyme)
