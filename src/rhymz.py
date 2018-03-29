@@ -3,7 +3,6 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import requests
 import os
-
 url = 'http://www.nurseryrhymes.org/nursery-rhymes.html'
 
 #gets a list of all the urls from the landing page of rhymes website
@@ -36,8 +35,7 @@ def scrapeRhymes(links):
     return rhymes
 
 # call function
-def printRhymes():
-    rhymes = scrapeRhymes(fixLinks(getListOfUrl(url)))
+def printRhymes(rhymes):
     for text in rhymes:
         print(text)
 
