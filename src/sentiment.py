@@ -1,7 +1,8 @@
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import rhymz
-analyzer = SentimentIntensityAnalyzer()
+
 def getScores(url):
+    analyzer = SentimentIntensityAnalyzer()
     rhymes = rhymz.scrapeRhymes(rhymz.fixLinks(rhymz.getListOfUrl(url)))
     sentimentScores = {}
     for rhyme in rhymes:
