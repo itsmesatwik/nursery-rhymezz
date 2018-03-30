@@ -27,9 +27,12 @@ def fixLinks(links):
 def scrapeRhymes(links):
     rhymes = []
     for link in links:
-        response = urlopen(link)
+        try:
+            response = urlopen(link)
+        except:
+            continue
         html = response.read()
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "html5lib")
         print(soup.find(id = "nursery-rhymes-lyrics").get_text())
         rhymes.append(soup.find(id = "nursery-rhymes-lyrics").get_text())
     return rhymes
